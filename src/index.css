@@ -1,0 +1,26 @@
+:root {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --primary-3: #BC143C;
+  --primary-2: #E14057;
+  --primary-1: #FF6475;
+  --dark-3: #151515;
+  --dark-2: #212121;
+  --dark-1: #474747;
+  --light-3: #919183;
+  --light-2: #C6C7B8;
+  --light-1: #FFFFF0;
+  --accents-blue-3: #2F4858;
+  --accents-blue-2: #516A7B;
+  --accents-blue-1: #748EA0;
+  --accents-gold-3: #957B00;
+  --accents-gold-2: #C9A800;
+  --accents-gold-1: #FFD700;
+  --accents-green-3: #005246;
+  --accents-green-2: #307467;
+  --accents-green-1: #55988A;
+}
+
+body {
+  background-color: var(--dark-2);
+  margin: 0;
+}

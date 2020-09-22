@@ -1,0 +1,43 @@
+.line {
+  display: flex;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  margin-bottom: 1vw;
+  font-size: 0.9vw;
+}
+
+.line-header {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+
+.stations-list {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.station-link {
+  display: flex;
+  flex-direction: column;
+  width: 7vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  padding-right: 1vw;
+  align-items: center;
+  cursor: pointer;
+  filter: brightness(2);
+}
+
+.station-link:first-child{
+  padding-left: 0;
+}
+
+.station-circle {
+  height: 1.5vh;
+  width: 1.5vh;
+  border-radius: 100%;
+  margin-bottom: 0.5vh;
+}

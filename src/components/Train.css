@@ -1,0 +1,45 @@
+.train {
+  display: flex;
+  height: 20vh;
+  width: 14vw;
+  min-width: 12vw;
+  padding: 1vw 1.5vw;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 0.5rem var(--dark-3);
+  flex-direction: column;
+  transition: .3s;
+  margin: 0;
+  position: relative;
+  cursor: default;
+  color: var(--light-1);
+}
+
+.train:hover {
+  transform: translateY(-1.4vh);
+}
+
+.train-info-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.train-info-box *{
+  margin-bottom: 0.5vh;
+}
+
+.train-info-box:not(:first-child) {
+  margin-top: auto;
+}
+
+.train-info {
+  font-size: 1.8vw;
+}
+
+.train-seq {
+  font-size: 0.8vw;
+}
+
+.train-description {
+  font-size: 0.9vw;
+  font-weight: bold;
+}

@@ -1,0 +1,20 @@
+.platform {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.platform-header {
+  display: flex;
+  font-size: 1.8vw;
+  font-weight: bold;
+  padding: 0.25rem;
+}
+
+.trains-list {
+  display: grid;
+  grid-gap: 3vw;
+  grid-template-columns: repeat(auto-fit, 15vw);
+  padding: 4vh 0;
+  flex-direction: row;
+}
