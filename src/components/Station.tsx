@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { lineColors, stationNames } from "../dictionary";
 import { StationProps } from "../interfaces/Station.interface";
 import { TrainProps } from "../interfaces/Train.interface";
 import Platform from "./Platform";
@@ -6,52 +7,6 @@ import "./Station.css"
 
 function Station({station, line, JSON, toHome, refresh}: StationProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
-
-  const stationNames: {[index: string]: string} = {
-    "HOK": "Hong Kong",
-    "KOW": "Kowloon",
-    "TSY": "Tsing Yi",
-    "AIR": "Airport",
-    "AWE": "AsiaWorld-Expo",
-    "OLY": "Olympic",
-    "NAC": "Nam Cheong",
-    "LAK": "Lai King",
-    "SUN": "Sunny Bay",
-    "TUC": "Tung Chung",
-    "HUH": "Hung Hom",
-    "ETS": "East Tsim Sha Tsui",
-    "AUS": "Austin",
-    "MEF": "Mei Foo",
-    "TWW": "Tseung Wan West",
-    "KSR": "Kam Sheung Road",
-    "YUL": "Yuen Long",
-    "LOP": "Long Ping",
-    "TIS": "Tin Shui Wai",
-    "SIH": "Siu Hong",
-    "TUM": "Tuen Mun",
-    "NOP": "North Point",
-    "QUB": "Quarry Bay",
-    "YAT": "Yau Tong",
-    "TIK": "Tiu Keng Leng",
-    "TKO": "Tseung Kwan O",
-    "LHP": "Lohas Park",
-    "HAH": "Hang Hau",
-    "POA": "Po Lam"
-  }
-
-  const linesNames: {[index: string]: string} = {
-    "AEL": "Airport Express",
-    "TCL": "Tung Chung Line",
-    "WRL": "West Rail Line",
-    "TKL": "Tseung Kwan O Line"
-  }
-
-  const lineColors: {[index:string] : string} = {
-    "AEL": "#138889",
-    "TCL": "#F59448",
-    "WRL": "#B3158C",
-    "TKL": "#7D4C9B"    
-  }
 
   //Get line color
   const lineColor = lineColors[line];

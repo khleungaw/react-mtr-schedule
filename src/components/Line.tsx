@@ -1,23 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { LineProps } from "../interfaces/Line.interface";
-import "./Line.css"
+import "./Line.css";
+import { lineColors, lineNames, stationNames } from "../dictionary";
 
 function Line({lineID, selectStationFunction}: LineProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
-  
-  const linesNames: {[index: string]: string} = {
-    "AEL": "Airport Express",
-    "TCL": "Tung Chung Line",
-    "WRL": "West Rail Line",
-    "TKL": "Tseung Kwan O Line"
-  }
-
-  const lineColors: {[index:string] : string} = {
-    "AEL": "#138889",
-    "TCL": "#F59448",
-    "WRL": "#B3158C",
-    "TKL": "#7D4C9B"    
-  }
 
   //Get line color
   const lineColor = lineColors[lineID];
@@ -52,7 +39,7 @@ function Line({lineID, selectStationFunction}: LineProps) {
   return(
     <div className="line" style={{color: lineColor}}>
       <header className="line-header">
-        <span>{linesNames[lineID]}</span>
+        <span>{lineNames[lineID]}</span>
       </header>
       <div className="stations-list">
         {JSX}
