@@ -40,7 +40,7 @@ function Station({station, line, JSON, toHome, refresh, animationState}: Station
       let data: any = JSON.data;
       const trainsInfo: TrainsInfo = data[key] as TrainsInfo;
 
-      //Check data absenc
+      //Check data absence
       if (Object.keys(trainsInfo).length === 2) {
         setJSX(
           [<span>Data is absent</span>]

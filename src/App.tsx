@@ -11,10 +11,13 @@ function App() {
 
   const callAPI = useCallback(
     (line: string , station: string)=>{
+      //Set animationState to false for refresh animation
       setAnimationState(false);
+      //Fetch data from API
       fetch(`https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line=${line}&sta=${station}&lang=en`)
         .then(res => {
           if (res.status !== 200) {
+            //Return status code to display error
             return {data: res.status};
           } else {
             return res.json();
@@ -27,6 +30,7 @@ function App() {
 
   const selectStation = useCallback(
     (station: string, line: string)=>{
+      //Set animationState to false for transition during stations selection or going back to home page
       setAnimationState(false);
       //Update currentStation
       if (station === "HOME" && line === "HOME") {
@@ -41,9 +45,6 @@ function App() {
 
   useEffect(
     ()=>{
-      //Toggle animation
-      //setAnimationState(false);
-      //setTimeout(()=>setAnimationState(true), 500);
       //Call MTR API to update apiJSON when a new station is selected
       if (currentStation[0] !== "HOME") {
         const station = currentStation[0];
