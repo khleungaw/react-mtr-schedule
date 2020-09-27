@@ -13,4 +13,13 @@
   align-content: flex-start;
   align-items: flex-start;
   padding: 2vh 1.5vw;
+  transition: 0.2s;
+}
+
+.line-list.visible {
+  filter: opacity(1);
+}
+
+.line-list.invisible {
+  filter: opacity(0);
 }

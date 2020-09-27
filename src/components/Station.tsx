@@ -5,7 +5,7 @@ import { TrainProps } from "../interfaces/Train.interface";
 import Platform from "./Platform";
 import "./Station.css"
 
-function Station({station, line, JSON, toHome, refresh}: StationProps) {
+function Station({station, line, JSON, toHome, refresh, animationState}: StationProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
 
   //Get line color
@@ -88,7 +88,7 @@ function Station({station, line, JSON, toHome, refresh}: StationProps) {
         <span style={{color: lineColor}}>{stationNames[station].toUpperCase()} </span>
         <span>Last Updated: {JSON.curr_time}</span>
       </header>
-      <div className="platforms-list">
+      <div className={animationState ? "platforms-list visible" : "platforms-list invisible"}>
         {JSX}
       </div>
     </div>

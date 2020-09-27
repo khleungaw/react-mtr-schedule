@@ -10,4 +10,5 @@ export interface StationProps {
   JSON: Data;
   toHome: Function;
   refresh: Function;
+  animationState: boolean;
 }

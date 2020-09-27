@@ -32,3 +32,15 @@
   color: var(--accents-gold-1);
   cursor: pointer;
 }
+
+.platforms-list {
+  transition: 0.3s;
+}
+
+.platforms-list.visible {
+  filter: opacity(1);
+}
+
+.platforms-list.invisible {
+  filter: opacity(0);
+}
