@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { lineColors, stationNames } from "../dictionary";
+import { destionationsList, lineColors, stationNames } from "../dictionary";
 import { StationProps } from "../interfaces/Station.interface";
 import { TrainProps } from "../interfaces/Train.interface";
 import Platform from "./Platform";
@@ -32,7 +32,7 @@ function Station({station, line, JSON, toHome, refresh, animationState}: Station
 
       //Get key value
       const key = Object.keys(JSON.data)[0];
-      //Get line and lineColor
+      //Get line
       const line = key.split("-")[0];
 
       //Get a copy of the array using the key
@@ -56,14 +56,6 @@ function Station({station, line, JSON, toHome, refresh, animationState}: Station
       Object.keys(trainsInfo).forEach(
         (key)=>{if (key === "DOWN" || key === "UP") {directions.push(key);}}
       );
-
-      //Generate destinations
-      const destionationsList:any = {
-        "AEL": {"UP": "AsiaWorld-Expo", "DOWN": "Hong Kong"},
-        "TCL": {"UP": "Tung Chung", "DOWN": "Hong Kong"},
-        "WRL": {"UP": "Tuen Mun", "DOWN": "Hung Hom"},
-        "TKL": {"UP": "Po Lam/Lohas Park", "DOWN": "North Point/Tiu Keng Leng"}   
-      };
 
       //Map UP and DOWN as JSX elements
       let map = directions.map(

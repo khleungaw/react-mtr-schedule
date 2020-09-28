@@ -82,3 +82,10 @@ export const stationsList: {[index: string]: Array<string>} = {
   "WRL" : ["Hung Hom", "East Tsim Sha Tsui", "Austin", "Nam Cheong", "Mei Foo", "Tsuen Wan West", "Kam Sheung Road", "Yuen Long", "Long Ping", "Tin Shui Wai", "Siu Hong", "Tuen Mun"],
   "TKL" : ["North Point", "Quarry Bay", "Yau Tong", "Tiu Keng Leng", "Tseung Kwan O", "Lohas Park", "Hang Hau", "Po Lam"],
 }
+
+export const destionationsList: {[index: string]: {[index: string]: string}} = {
+  "AEL": {"UP": "AsiaWorld-Expo", "DOWN": "Hong Kong"},
+  "TCL": {"UP": "Tung Chung", "DOWN": "Hong Kong"},
+  "WRL": {"UP": "Tuen Mun", "DOWN": "Hung Hom"},
+  "TKL": {"UP": "Po Lam/Lohas Park", "DOWN": "North Point/Tiu Keng Leng"}   
+};
