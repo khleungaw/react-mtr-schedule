@@ -1,5 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-All data is from the offical MTR API. (https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br />
+All data is from the offical MTR API(https://data.gov.hk/en-data/dataset/mtr-data2-nexttrain-data).  <br />
+Demo: https://solaceplus.github.io/react-mtr-schedule/ <br />
 
 ## Available Scripts
 
