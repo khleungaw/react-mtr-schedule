@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { LineProps } from "../interfaces/Line.interface";
 import "./Line.css";
-import { lineColors, lineNames } from "../dictionary";
+import { lineColors, lineNames, stationsList } from "../dictionary";
 
 function Line({lineID, selectStationFunction}: LineProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
@@ -12,13 +12,6 @@ function Line({lineID, selectStationFunction}: LineProps) {
   useEffect(
     ()=>{
       //Map stations in a line as JSX elements
-      const stationsList: {[index: string]: Array<string>} = {
-        "AEL" : ["Hong Kong", "Kowloon", "Tsing Yi", "Airport", "AsiaWorld-Expo"],
-        "TCL" : ["Hong Kong", "Kowloon", "Olympic", "Nam Cheong", "Lai King", "Tsing Yi", "Sunny Bay", "Tung Chung"],
-        "WRL" : ["Hung Hom", "East Tsim Sha Tsui", "Austin", "Nam Cheong", "Mei Foo", "Tsuen Wan West", "Kam Sheung Road", "Yuen Long", "Long Ping", "Tin Shui Wai", "Siu Hong", "Tuen Mun"],
-        "TKL" : ["North Point", "Quarry Bay", "Yau Tong", "Tiu Keng Leng", "Tseung Kwan O", "Lohas Park", "Hang Hau", "Po Lam"],
-      }
-
       const stations = stationsList[lineID];
 
       let map = stations.map(
