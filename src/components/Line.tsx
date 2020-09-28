@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { LineProps } from "../interfaces/Line.interface";
 import "./Line.css";
-import { lineColors, lineNames, stationNames } from "../dictionary";
+import { lineColors, lineNames } from "../dictionary";
 
 function Line({lineID, selectStationFunction}: LineProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
@@ -32,7 +32,7 @@ function Line({lineID, selectStationFunction}: LineProps) {
 
       setJSX(map);
     },
-    [lineID, selectStationFunction]
+    [lineID, selectStationFunction, lineColor]
   )
 
     

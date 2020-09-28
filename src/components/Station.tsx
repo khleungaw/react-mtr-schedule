@@ -75,7 +75,7 @@ function Station({station, line, JSON, toHome, refresh, animationState}: Station
       
       setJSX(map);
     },
-    [JSON]
+    [JSON, lineColor]
   );
 
   return(

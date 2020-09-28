@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useState } from 'react';
 import './App.css';
 import Station from './components/Station';
 import Line from './components/Line';
@@ -23,7 +23,12 @@ function App() {
             return res.json();
           }
         })
-        .then(data => {setApiJSON(data);setTimeout(()=>setAnimationState(true), 300);});
+        .then(data => setApiJSON(data))
+        //Change currentStation (transition to next page) after JSON is changed
+        .then(()=>{
+          setStation([station, line]);
+          setTimeout(()=>setAnimationState(true), 300);
+        })
     },
     []
   );
@@ -37,22 +42,11 @@ function App() {
         setStation(["HOME", "HOME"]);
         setTimeout(()=>setAnimationState(true), 300);
       } else {  
-        setStation([stationSymbols[station.replace(/ /g, "_").toUpperCase()], line]);
+        callAPI(line, stationSymbols[station.replace(/ /g, "_").toUpperCase()]);
+        //setStation([stationSymbols[station.replace(/ /g, "_").toUpperCase()], line]);
       }
     },
-    []
-  )
-
-  useEffect(
-    ()=>{
-      //Call MTR API to update apiJSON when a new station is selected
-      if (currentStation[0] !== "HOME") {
-        const station = currentStation[0];
-        const line = currentStation[1];
-        callAPI(line, station);
-      }
-    },
-    [currentStation, callAPI]
+    [callAPI]
   )
 
   return (
