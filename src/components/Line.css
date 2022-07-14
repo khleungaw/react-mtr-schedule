@@ -3,7 +3,8 @@
   border-radius: 0.5rem;
   flex-direction: column;
   margin-bottom: 1vw;
-  font-size: 0.9vw;
+  font-size: 16px;
+  width: 100%;
 }
 
 .line-header {
@@ -16,16 +17,16 @@
 .stations-list {
   display: flex;
   flex-direction: row;
-  overflow-x: hidden;
+  flex-wrap: wrap;
 }
 
 .station-link {
   display: flex;
   flex-direction: column;
-  width: 7vw;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  padding-right: 1vw;
+  width: 9vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  padding-right: 0.5vw;
   align-items: center;
   cursor: pointer;
   filter: brightness(2);

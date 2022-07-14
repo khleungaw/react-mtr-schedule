@@ -1,15 +1,17 @@
 export const lineNames: {[index: string]: string} = {
   "AEL": "Airport Express",
   "TCL": "Tung Chung Line",
-  "WRL": "West Rail Line",
-  "TKL": "Tseung Kwan O Line"
+  "TML": "Tuen Ma Line",
+  "TKL": "Tseung Kwan O Line",
+  "EAL": "East Rail Line"
 }
 
 export const lineColors: {[index:string] : string} = {
   "AEL": "#138889",
   "TCL": "#F59448",
-  "WRL": "#B3158C",
-  "TKL": "#7D4C9B"    
+  "TML": "#8b310e",
+  "TKL": "#7D4C9B",
+  "EAL": "#63b8e7"
 }
 
 export const stationNames: {[index: string]: string} = {
@@ -17,17 +19,34 @@ export const stationNames: {[index: string]: string} = {
   "KOW": "Kowloon",
   "TSY": "Tsing Yi",
   "AIR": "Airport",
-  "AWE": "AsiaWorld-Expo",
+  "AWE": "AsiaWorld Expo",
+  "TCL": "Tung Chung Line",
   "OLY": "Olympic",
   "NAC": "Nam Cheong",
   "LAK": "Lai King",
   "SUN": "Sunny Bay",
   "TUC": "Tung Chung",
+  "TML": "Tuen Ma Line",
+  "WKS": "Wu Kai Sha",
+  "MOS": "Ma On Shan",
+  "HEO": "Heng On",
+  "TSH": "Tai Shui Hang",
+  "SHM": "Shek Mun",
+  "CIO": "City One",
+  "STW": "Sha Tin Wai",
+  "CKT": "Che Kung Temple",
+  "TAW": "Tai Wai",
+  "HIK": "Hin Keng",
+  "DIH": "Diamond Hill",
+  "KAT": "Kai Tak",
+  "SUW": "Sung Wong Toi",
+  "TKW": "To Kwa Wan",
+  "HOM": "Ho Man Tin",
   "HUH": "Hung Hom",
   "ETS": "East Tsim Sha Tsui",
   "AUS": "Austin",
   "MEF": "Mei Foo",
-  "TWW": "Tseung Wan West",
+  "TWW": "Tsuen Wan West",
   "KSR": "Kam Sheung Road",
   "YUL": "Yuen Long",
   "LOP": "Long Ping",
@@ -39,9 +58,24 @@ export const stationNames: {[index: string]: string} = {
   "YAT": "Yau Tong",
   "TIK": "Tiu Keng Leng",
   "TKO": "Tseung Kwan O",
-  "LHP": "Lohas Park",
+  "LHP": "LOHAS Park",
   "HAH": "Hang Hau",
-  "POA": "Po Lam"
+  "POA": "Po Lam",
+  "EAL": "East Rail Line",
+  "ADM": "Admiralty",
+  "EXC": "Exhibition Centre",
+  "MKK": "Mong Kok East",
+  "KOT": "Kowloon Tong",
+  "SHT": "Sha Tin",
+  "FOT": "Fo Tan",
+  "RAC": "Racecourse",
+  "UNI": "University",
+  "TAP": "Tai Po Market",
+  "TWO": "Tai Wo",
+  "FAN": "Fanling",
+  "SHS": "Sheung Shui",
+  "LOW": "Lo Wu",
+  "LMC": "Lok Ma Chau"
 }
 
 export const stationSymbols: {[index: string]: string} = {
@@ -77,15 +111,17 @@ export const stationSymbols: {[index: string]: string} = {
 }
 
 export const stationsList: {[index: string]: Array<string>} = {
-  "AEL" : ["Hong Kong", "Kowloon", "Tsing Yi", "Airport", "AsiaWorld-Expo"],
-  "TCL" : ["Hong Kong", "Kowloon", "Olympic", "Nam Cheong", "Lai King", "Tsing Yi", "Sunny Bay", "Tung Chung"],
-  "WRL" : ["Hung Hom", "East Tsim Sha Tsui", "Austin", "Nam Cheong", "Mei Foo", "Tsuen Wan West", "Kam Sheung Road", "Yuen Long", "Long Ping", "Tin Shui Wai", "Siu Hong", "Tuen Mun"],
-  "TKL" : ["North Point", "Quarry Bay", "Yau Tong", "Tiu Keng Leng", "Tseung Kwan O", "Lohas Park", "Hang Hau", "Po Lam"],
+  "AEL": ["HOK","KOW","TSY","AIR","AWE"],
+  "TCL": ["HOK","KOW","OLY","NAC","LAK","TSY","SUN","TUC"],
+  "TML": ["WKS","MOS","HEO","TSH","SHM","CIO","STW","CKT","TAW","HIK","DIH","KAT","SUW","TKW","HOM","HUH","ETS","AUS","NAC","MEF","TWW","KSR","YUL","LOP","TIS","SIH","TUM"],
+  "TKL": ["NOP","QUB","YAT","TIK","TKO","LHP","HAH","POA"],
+  "EAL": ["ADM","EXC","HUH","MKK","KOT","TAW","SHT","FOT","RAC","UNI","TAP","TWO","FAN","SHS","LOW","LMC"]
 }
 
 export const destionationsList: {[index: string]: {[index: string]: string}} = {
   "AEL": {"UP": "AsiaWorld-Expo", "DOWN": "Hong Kong"},
   "TCL": {"UP": "Tung Chung", "DOWN": "Hong Kong"},
-  "WRL": {"UP": "Tuen Mun", "DOWN": "Hung Hom"},
-  "TKL": {"UP": "Po Lam/Lohas Park", "DOWN": "North Point/Tiu Keng Leng"}   
+  "TML": {"UP": "Tuen Mun", "DOWN": "Wu Kai Sha"},
+  "TKL": {"UP": "Po Lam/Lohas Park", "DOWN": "North Point/Tiu Keng Leng"},
+  "EAL": {"UP": "Lok Ma Chau", "DOWN": "Admiralty"}
 };

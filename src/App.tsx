@@ -2,7 +2,6 @@ import React, { useCallback, useState } from 'react';
 import './App.css';
 import Station from './components/Station';
 import Line from './components/Line';
-import { stationSymbols } from './dictionary';
 
 function App() {
   const [apiJSON, setApiJSON] = useState({data: "NULL"});
@@ -42,7 +41,7 @@ function App() {
         setStation(["HOME", "HOME"]);
         setTimeout(()=>setAnimationState(true), 300);
       } else {  
-        callAPI(line, stationSymbols[station.replace(/ /g, "_").toUpperCase()]);
+        callAPI(line, station);
         //setStation([stationSymbols[station.replace(/ /g, "_").toUpperCase()], line]);
       }
     },
@@ -56,8 +55,9 @@ function App() {
           <span>Click on a station to view the scheduled trains</span>
           <Line lineID="AEL" selectStationFunction={selectStation}/>
           <Line lineID="TCL" selectStationFunction={selectStation}/>
-          <Line lineID="WRL" selectStationFunction={selectStation}/>
+          <Line lineID="TML" selectStationFunction={selectStation}/>
           <Line lineID="TKL" selectStationFunction={selectStation}/>
+          <Line lineID="EAL" selectStationFunction={selectStation}/>
         </div>
       }
       {currentStation[0] !== "HOME" &&

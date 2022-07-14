@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { LineProps } from "../interfaces/Line.interface";
 import "./Line.css";
-import { lineColors, lineNames, stationsList } from "../dictionary";
+import { lineColors, lineNames, stationNames, stationsList } from "../dictionary";
 
 function Line({lineID, selectStationFunction}: LineProps) {
   const [JSX, setJSX] = useState<Array<JSX.Element>>();
@@ -16,9 +16,9 @@ function Line({lineID, selectStationFunction}: LineProps) {
 
       let map = stations.map(
         (station)=>{return(
-          <div key={`${lineID}${station}`} className="station-link" onClick={(e)=>selectStationFunction(station, lineID)}>
+          <div key={`${lineID}${stationNames[station]}`} className="station-link" onClick={(e)=>selectStationFunction(station, lineID)}>
             <span className="station-circle" style={{backgroundColor: lineColor}}></span>
-            <span>{station}</span>
+            <span>{stationNames[station]}</span>
           </div>
         );}
       );

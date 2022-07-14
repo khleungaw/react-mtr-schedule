@@ -30,6 +30,13 @@ function Station({station, line, JSON, toHome, refresh, animationState}: Station
         return;
       }
 
+      if (JSON.status === 0) {
+        setJSX(
+          [<span key="error">{JSON.message}</span>]
+        );
+        return;
+      }
+
       //Get key value
       const key = Object.keys(JSON.data)[0];
       //Get line
