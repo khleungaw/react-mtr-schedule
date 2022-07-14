@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "/react-mtr-schedule/static/css/main.b81ba74f.chunk.css",
-    "main.js": "/react-mtr-schedule/static/js/main.94af41a9.chunk.js",
-    "main.js.map": "/react-mtr-schedule/static/js/main.94af41a9.chunk.js.map",
-    "runtime-main.js": "/react-mtr-schedule/static/js/runtime-main.b8f8baaf.js",
-    "runtime-main.js.map": "/react-mtr-schedule/static/js/runtime-main.b8f8baaf.js.map",
-    "static/js/2.67b6c597.chunk.js": "/react-mtr-schedule/static/js/2.67b6c597.chunk.js",
-    "static/js/2.67b6c597.chunk.js.map": "/react-mtr-schedule/static/js/2.67b6c597.chunk.js.map",
+    "main.css": "/react-mtr-schedule/static/css/main.2469db26.css",
+    "main.js": "/react-mtr-schedule/static/js/main.6add7705.js",
     "index.html": "/react-mtr-schedule/index.html",
-    "precache-manifest.22f3a115cca5a0fcf517ebe6f1bd6910.js": "/react-mtr-schedule/precache-manifest.22f3a115cca5a0fcf517ebe6f1bd6910.js",
-    "service-worker.js": "/react-mtr-schedule/service-worker.js",
-    "static/css/main.b81ba74f.chunk.css.map": "/react-mtr-schedule/static/css/main.b81ba74f.chunk.css.map",
-    "static/js/2.67b6c597.chunk.js.LICENSE.txt": "/react-mtr-schedule/static/js/2.67b6c597.chunk.js.LICENSE.txt"
+    "main.2469db26.css.map": "/react-mtr-schedule/static/css/main.2469db26.css.map",
+    "main.6add7705.js.map": "/react-mtr-schedule/static/js/main.6add7705.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8f8baaf.js",
-    "static/js/2.67b6c597.chunk.js",
-    "static/css/main.b81ba74f.chunk.css",
-    "static/js/main.94af41a9.chunk.js"
+    "static/css/main.2469db26.css",
+    "static/js/main.6add7705.js"
   ]
 }
